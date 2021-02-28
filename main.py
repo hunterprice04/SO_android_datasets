@@ -17,9 +17,7 @@ from helperfunc import getEpochTime, dictToList, getSaveFileName
 
 # declare relevant variables
 QUESTION, ANSWER = (1, 2)
-q_file = '/questions_'
-a_file = '/answers_'
-tags = "android"
+q_file, a_file, tags = ('/questions_', '/answers_', "android")
 year = [y for y in range(2008, 2022)]
 month = [m for m in range(1, 13)]
 columns = ['Id', 'PostTypeId', 'AcceptedAnswerId', 'ParentId', 'Url', 'CreationDate',
@@ -35,8 +33,8 @@ for y in year:
 for y in year:
     for m in month:
         # get start and end date
-        from_date = getEpochTime(y, m, False)  # 2021 01
-        to_date = getEpochTime(y, m, True)  # 2021 02
+        from_date = getEpochTime(y, m, False)
+        to_date = getEpochTime(y, m, True)
 
         # get questions data
         q_data = []
